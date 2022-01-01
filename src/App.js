@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Profile from "./profile/Profile";
 
 function App() {
+  const personne = {
+    fullname: "Manel Marzougui",
+    bio: "Queen",
+    profession: "etudiante",
+    img: "https://static.vecteezy.com/ti/vecteur-libre/p1/2002257-belle-femme-avatar-personnage-icone-gratuit-vectoriel.jpg",
+  };
+  const handleName = (x) => {
+    alert(x);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile personne={personne} handlname={handleName}>
+        <img src="https://static.vecteezy.com/ti/vecteur-libre/p1/2002257-belle-femme-avatar-personnage-icone-gratuit-vectoriel.jpg" />
+      </Profile>
     </div>
   );
 }
